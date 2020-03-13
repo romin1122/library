@@ -1,0 +1,127 @@
+
+body,html{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-size:1.25em;
+}
+
+.book{
+  padding:.5em;
+  margin:.5em;
+  float:left;
+  width:10em;
+  border-radius:.5em;
+}
+
+#mainTitle{
+  color:green;
+  margin-bottom:0;
+}
+
+#newBook{
+  float:right;
+  border-radius:.25em;
+  padding:.5em;
+  background-color:lightblue;
+  border:.5px solid blue;
+  font-size:1.2em;
+  margin-right:1em;
+}
+
+.title{
+ font-weight:bold;
+ font-size:1.25em;
+ padding:.25em;
+}
+
+.author,.pages{
+  padding:.2em;
+  padding-left:1em;
+}
+
+
+.readBtn,.rmBtn{
+  border:0;
+  padding:.5em;
+  border-radius:.2em;
+}
+
+.read{
+  background-color:#cccccc;
+}
+.read:hover{
+  background-color:#ff9999;
+  color:white;
+}
+
+.notRead{
+  background-color:#66ccff;
+}
+.notRead:hover{
+  background-color:#b3e6ff;
+}
+
+.rmBtn{
+  margin:.5em;
+  background-color:#ffb3b3;
+}
+.rmBtn:hover{
+  background-color:#ff4d4d;
+}
+
+
+input,label{
+  font-size:1.3em;
+  padding:.7em;
+  margin:.5em;
+  border-radius:.2em;
+  border:3px solid blue;
+}
+label{
+  border:none;
+}
+input[type="checkbox"]{
+  height:1em;
+  width:1em;
+  padding:1em;
+  
+}
+
+#inputTitle,#inputAuthor,#inputPages{
+  
+}
+
+
+#newBookForm{
+  border:1px solid black;
+  border-radius:1em;
+  margin:1em;
+  display:none;
+  z-index:10;
+  position:fixed;
+  top:1em;
+  background-color:white;
+  display:none;
+  width:95%;
+}
+
+
+#add,#cancel{
+  padding:.5em;
+  margin:1em;
+  border-radius:.2em;
+  border:1px solid blue;
+  font-size:1.3em;
+  padding:.7em;
+}
+
+#add{
+  background-color:lightgreen;
+}
+
+#add:hover,#cancel:hover{
+  background-color:#ffcc66;
+}
