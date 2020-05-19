@@ -18,7 +18,7 @@ function Book(){
 }
 
 function randColor(){
-  let colors=["lightblue","lightgreen","#ffcc66","#ffccff","#66ffcc","#cc99ff"];
+  let colors=["#FCDE9C","#C4D6B0","#D36582","#FFEECF","#C9A690", "#FCBA04", "#F3f3f3", "#EEE82C", "#91CB3E", "#53A548", "#AEA4BF", "#E3E4DB"];
   return colors[Math.floor(Math.random()*colors.length)];
 }
 
@@ -56,9 +56,9 @@ function render(){
     let card=document.createElement("div");
     card.classList.add("book");
     let html=`<span class='title'>${book.title}</span><br>
-      <span class='author'>${book.author}</span><br>
+      <span class='author'>By: ${book.author}</span><br>
       <span class='pages'>${book.pages}</span><br>`;
-    if(book.read){
+    if(!book.read){
       html+=`<button id='id${book.id}' class='read readBtn' onclick='toggleRead(${book.id})'>Read</button>`;
     }else{
       html+=`<button id='id${book.id}' class='notRead readBtn' onclick='toggleRead(${book.id})'>Not Read</button>`;
@@ -77,7 +77,7 @@ function toggleRead(id){
     if(book.id==id){
       book.read = !book.read;
       let btn=document.querySelector(`#id${book.id}`);
-      if(book.read){
+      if(!book.read){
         btn.classList.add("read");
         btn.classList.remove("notRead");
         btn.innerHTML="Read";
@@ -131,8 +131,10 @@ function updateData(){
 window.onload=function(){
   
   if(localStorage.getItem("myLibrary")==null){
-    addBookToLibrary("Library", "Abdul Muhymen", 50, true);
-    addBookToLibrary("UnKnown","Anonymous",698,false);
+
+    addBookToLibrary("RICH DAD, POOR DAD","Robert",600,false);
+    addBookToLibrary("SAMPLE BOOK", "Me", 1, true);
+    
     
     localStorage.setItem("myLibrary",JSON.stringify(myLibrary));
   }else{

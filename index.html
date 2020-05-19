@@ -4,28 +4,25 @@
     <title>Library</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-   
     <script src="script.js"></script>
     
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
   </head>
   
   
   
   
   <body>
-    <h1 align="center" id="mainTitle">LIBRARY</h1>
-    <button id="newBook" onclick="showForm()">NEW BOOK</button>
+    <h1 align="center" id="mainTitle"><i>LIBRARY</i></h1>
+    <br>
+    <button id="newBook" onclick="showForm()"><b>NEW BOOK</b></button>
     <br><br>
     <div id="library">
       
     </div>
     
-    
-    
-    
-    
+
     <div id="newBookForm" align="center">
       <h3 align="center">
         Enter Details
@@ -34,14 +31,11 @@
       <input id="inputAuthor" placeholder="Author" required><br>
       <input id="inputPages" placeholder="Pages" type="number" required><br>
       <input type="checkbox" id="inputRead"> <label>Read</label><br>
-      <button id="add" onclick="addBookToLibrary()"> + Add</button>
+      <button id="add" onclick="addBookToLibrary()">Add</button>
       <button id="cancel" onclick="hideForm()">Cancel</button>
     </div>
-    
-    
-    
-    
-    
-    
+
+  
+    <br><br><br><br>
   </body>
 </html>

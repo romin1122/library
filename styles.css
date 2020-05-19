@@ -2,10 +2,12 @@
 body,html{
   margin:0;
   padding:0;
-}
+  background-color: #9F84BD;
 
+}
 body{
   font-size:1.25em;
+  font-family: fantasy;
 }
 
 .book{
@@ -14,10 +16,11 @@ body{
   float:left;
   width:10em;
   border-radius:.5em;
+  word-wrap: break-word;
 }
 
 #mainTitle{
-  color:green;
+  color:#CAFF8A;
   margin-bottom:0;
 }
 
@@ -25,21 +28,35 @@ body{
   float:right;
   border-radius:.25em;
   padding:.5em;
-  background-color:lightblue;
-  border:.5px solid blue;
+  background-color:#F3FFC6;
+  border:.5px solid #306B34;
   font-size:1.2em;
   margin-right:1em;
+  color: #b6174B;
+  z-index: 5;
+  position: fixed;
+  bottom: 5vw;
+  right: 5vw;
+}
+
+#newBook:hover
+{
+  color: #F3FFC6;
+  background-color: #306B34;
+  border:.3px solid #C3Eb78;
 }
 
 .title{
  font-weight:bold;
  font-size:1.25em;
  padding:.25em;
+ color: #3A405A;
 }
 
 .author,.pages{
   padding:.2em;
   padding-left:1em;
+  color: rgb(40, 53, 90);
 }
 
 
@@ -53,15 +70,19 @@ body{
   background-color:#cccccc;
 }
 .read:hover{
-  background-color:#ff9999;
-  color:white;
+  background-color:rgb(139, 187, 62);
+  color: rgb(255, 254, 235);
+  font-weight: bold;
 }
+
 
 .notRead{
   background-color:#66ccff;
 }
 .notRead:hover{
-  background-color:#b3e6ff;
+  background-color:#15aaf5;
+  color: white;
+  font-weight: bold;
 }
 
 .rmBtn{
@@ -70,15 +91,16 @@ body{
 }
 .rmBtn:hover{
   background-color:#ff4d4d;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 }
 
 
 input,label{
   font-size:1.3em;
-  padding:.7em;
+  padding:.6em;
   margin:.5em;
   border-radius:.2em;
-  border:3px solid blue;
 }
 label{
   border:none;
@@ -87,25 +109,26 @@ input[type="checkbox"]{
   height:1em;
   width:1em;
   padding:1em;
-  
 }
 
 #inputTitle,#inputAuthor,#inputPages{
-  
+  background-color: #90FCF9;
+  color: #7699D4;
+  font-weight: bold;
+  width: 50vw;
 }
 
 
 #newBookForm{
-  border:1px solid black;
-  border-radius:1em;
-  margin:1em;
+  border-radius:.8em;
+  margin:1em 20vw;
   display:none;
   z-index:10;
   position:fixed;
   top:1em;
-  background-color:white;
+  background-color: #ACECA1;
   display:none;
-  width:95%;
+  width:60vw;
 }
 
 
@@ -113,15 +136,73 @@ input[type="checkbox"]{
   padding:.5em;
   margin:1em;
   border-radius:.2em;
-  border:1px solid blue;
+  border:1px solid #FB8F67;
   font-size:1.3em;
   padding:.7em;
 }
 
 #add{
-  background-color:lightgreen;
+  background-color:rgb(102, 190, 224);
+
+}
+
+#cancel
+{
+  background-color: #FB8F67;
 }
 
 #add:hover,#cancel:hover{
-  background-color:#ffcc66;
+  background-color:#ffcc66}
+
+
+
+button:focus
+{
+	outline: none;
+	border: none;
+}
+button::-moz-focus-inner{
+	border:none;
+}
+
+#library
+{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+
+@media (max-width:800px)
+{
+
+
+  #newBook
+  {
+    width: 75vw;
+    left: 12.5vw;
+    bottom: 3vh;
+  }
+
+  .book
+  {
+    width: 90vw;
+  }
+
+  #add, #cancel
+  {
+    margin: .6em;
+  }
+
+  input,label{
+    padding:.5em;
+    margin:.4em;
+  }
+
+
+  #newBookForm
+  {
+    margin:1em 10vw;
+    width: 80vw;
+  }
+  
 }
