@@ -18,7 +18,8 @@ function Book(){
 }
 
 function randColor(){
-  let colors=["#FCDE9C","#C4D6B0","#D36582","#FFEECF","#C9A690", "#FCBA04", "#F3f3f3", "#EEE82C", "#91CB3E", "#53A548", "#AEA4BF", "#E3E4DB"];
+  let colors=["#FCDE9C","#C4D6B0","#D36582","#FFEECF","#C9A690", "#FCBA04",
+              "#F3f3f3", "#EEE82C", "#91CB3E", "#AEA4BF", "#E3E4DB"];
   return colors[Math.floor(Math.random()*colors.length)];
 }
 

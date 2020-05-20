@@ -59,6 +59,11 @@ body{
   color: rgb(40, 53, 90);
 }
 
+.title, .author, .pages
+{
+  color: black;
+}
+
 
 .readBtn,.rmBtn{
   border:0;
